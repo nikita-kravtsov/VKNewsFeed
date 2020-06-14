@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11AAF97D2496459D00650EA2 /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; };
+		11AAF97E2496459D00650EA2 /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11D07C5924962ABE002C151D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07C5824962ABE002C151D /* AppDelegate.swift */; };
 		11D07C5B24962ABE002C151D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07C5A24962ABE002C151D /* SceneDelegate.swift */; };
 		11D07C5D24962ABE002C151D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07C5C24962ABE002C151D /* ViewController.swift */; };
@@ -15,7 +17,22 @@
 		11D07C6524962ABF002C151D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D07C6324962ABF002C151D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		11AAF97F2496459D00650EA2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				11AAF97E2496459D00650EA2 /* VKSdkFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		11D07C5524962ABE002C151D /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D07C5824962ABE002C151D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D07C5A24962ABE002C151D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AAF97D2496459D00650EA2 /* VKSdkFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11AAF97B2496459D00650EA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11D07C4C24962ABE002C151D = {
 			isa = PBXGroup;
 			children = (
 				11D07C5724962ABE002C151D /* VKNewsFeed */,
 				11D07C5624962ABE002C151D /* Products */,
+				11AAF97B2496459D00650EA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +104,8 @@
 				11D07C5124962ABE002C151D /* Sources */,
 				11D07C5224962ABE002C151D /* Frameworks */,
 				11D07C5324962ABE002C151D /* Resources */,
+				11AAF97A249643FD00650EA2 /* ShellScript */,
+				11AAF97F2496459D00650EA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +161,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11AAF97A249643FD00650EA2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11D07C5124962ABE002C151D /* Sources */ = {
@@ -286,7 +336,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4SCVQG9P5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VKNewsFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +359,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4SCVQG9P5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VKNewsFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
