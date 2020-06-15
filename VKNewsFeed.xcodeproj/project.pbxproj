@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		115811672497988D00FAA415 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115811662497988D00FAA415 /* NetworkService.swift */; };
+		11581169249798AE00FAA415 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581168249798AE00FAA415 /* API.swift */; };
 		11AAF97D2496459D00650EA2 /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; };
 		11AAF97E2496459D00650EA2 /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11AAF98124966F1C00650EA2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAF98024966F1C00650EA2 /* AuthService.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		115811662497988D00FAA415 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		11581168249798AE00FAA415 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		11AAF98024966F1C00650EA2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		11AAF9832496738E00650EA2 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				11AAF98024966F1C00650EA2 /* AuthService.swift */,
+				115811662497988D00FAA415 /* NetworkService.swift */,
+				11581168249798AE00FAA415 /* API.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,7 +232,9 @@
 				11D07C5924962ABE002C151D /* AppDelegate.swift in Sources */,
 				11AAF9862496A6B400650EA2 /* FeedViewController.swift in Sources */,
 				11D07C5B24962ABE002C151D /* SceneDelegate.swift in Sources */,
+				115811672497988D00FAA415 /* NetworkService.swift in Sources */,
 				11AAF98124966F1C00650EA2 /* AuthService.swift in Sources */,
+				11581169249798AE00FAA415 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
