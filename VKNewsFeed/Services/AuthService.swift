@@ -17,7 +17,7 @@ protocol AuthServiceDelegate: class {
 }
 
 // we created a service for registration and authorization through VK
-class AuthService:NSObject, VKSdkDelegate, VKSdkUIDelegate {
+final class AuthService:NSObject, VKSdkDelegate, VKSdkUIDelegate {
 
     private let appId = "7510710"
     private let vkSdk:VKSdk
@@ -37,7 +37,7 @@ class AuthService:NSObject, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     func wakeUpSession() {
-        let scope = ["offline"]
+        let scope = ["wall", "friends"]
         VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
             switch state {
                 
