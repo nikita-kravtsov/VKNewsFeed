@@ -24,7 +24,7 @@ struct FeedItems: Decodable {
     let comments: CountableItem?
     let likes: CountableItem?
     let reposts: CountableItem?
-    let view: CountableItem?
+    let views: CountableItem?
 }
 
 struct CountableItem: Decodable {

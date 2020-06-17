@@ -24,8 +24,6 @@
 		11AAF97E2496459D00650EA2 /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11AAF98124966F1C00650EA2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAF98024966F1C00650EA2 /* AuthService.swift */; };
 		11AAF9842496738E00650EA2 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AAF9832496738E00650EA2 /* AuthViewController.storyboard */; };
-		11AAF9862496A6B400650EA2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAF9852496A6B400650EA2 /* FeedViewController.swift */; };
-		11AAF9882496A6D800650EA2 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AAF9872496A6D800650EA2 /* FeedViewController.storyboard */; };
 		11D07C5924962ABE002C151D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07C5824962ABE002C151D /* AppDelegate.swift */; };
 		11D07C5B24962ABE002C151D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07C5A24962ABE002C151D /* SceneDelegate.swift */; };
 		11D07C5D24962ABE002C151D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D07C5C24962ABE002C151D /* AuthViewController.swift */; };
@@ -64,8 +62,6 @@
 		11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		11AAF98024966F1C00650EA2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		11AAF9832496738E00650EA2 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
-		11AAF9852496A6B400650EA2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		11AAF9872496A6D800650EA2 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		11D07C5524962ABE002C151D /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D07C5824962ABE002C151D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D07C5A24962ABE002C151D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,15 +135,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		11AAF9892496A79D00650EA2 /* FeedViewController */ = {
-			isa = PBXGroup;
-			children = (
-				11AAF9852496A6B400650EA2 /* FeedViewController.swift */,
-				11AAF9872496A6D800650EA2 /* FeedViewController.storyboard */,
-			);
-			path = FeedViewController;
-			sourceTree = "<group>";
-		};
 		11AAF98A2496A7B300650EA2 /* AuthViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +167,6 @@
 				11D07C5824962ABE002C151D /* AppDelegate.swift */,
 				11D07C5A24962ABE002C151D /* SceneDelegate.swift */,
 				1146DD6E24993D0400415A10 /* Newsfeed */,
-				11AAF9892496A79D00650EA2 /* FeedViewController */,
 				11AAF98A2496A7B300650EA2 /* AuthViewController */,
 				11AAF98224966F2200650EA2 /* Services */,
 				11D07C6124962ABF002C151D /* Assets.xcassets */,
@@ -255,7 +241,6 @@
 				1159CC76249A493700E3F51F /* NewsfeedViewController.storyboard in Resources */,
 				11D07C6224962ABF002C151D /* Assets.xcassets in Resources */,
 				1159CC7B249A6F9700E3F51F /* NewsfeedCell.xib in Resources */,
-				11AAF9882496A6D800650EA2 /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +277,6 @@
 				11D07C5D24962ABE002C151D /* AuthViewController.swift in Sources */,
 				11D07C5924962ABE002C151D /* AppDelegate.swift in Sources */,
 				1146DD7624993D7F00415A10 /* NewsfeedPresenter.swift in Sources */,
-				11AAF9862496A6B400650EA2 /* FeedViewController.swift in Sources */,
 				1146DD7824993D7F00415A10 /* NewsfeedRouter.swift in Sources */,
 				11D07C5B24962ABE002C151D /* SceneDelegate.swift in Sources */,
 				115811672497988D00FAA415 /* NetworkService.swift in Sources */,
