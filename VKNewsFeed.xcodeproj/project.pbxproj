@@ -20,6 +20,7 @@
 		1159CC76249A493700E3F51F /* NewsfeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1159CC75249A493700E3F51F /* NewsfeedViewController.storyboard */; };
 		1159CC79249A6F3A00E3F51F /* NewsfeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1159CC78249A6F3A00E3F51F /* NewsfeedCell.swift */; };
 		1159CC7B249A6F9700E3F51F /* NewsfeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1159CC7A249A6F9700E3F51F /* NewsfeedCell.xib */; };
+		115AD5EE249CDE710082801C /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AD5ED249CDE710082801C /* WebImageView.swift */; };
 		11AAF97D2496459D00650EA2 /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; };
 		11AAF97E2496459D00650EA2 /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11AAF98124966F1C00650EA2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAF98024966F1C00650EA2 /* AuthService.swift */; };
@@ -59,6 +60,7 @@
 		1159CC75249A493700E3F51F /* NewsfeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsfeedViewController.storyboard; sourceTree = "<group>"; };
 		1159CC78249A6F3A00E3F51F /* NewsfeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedCell.swift; sourceTree = "<group>"; };
 		1159CC7A249A6F9700E3F51F /* NewsfeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsfeedCell.xib; sourceTree = "<group>"; };
+		115AD5ED249CDE710082801C /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		11AAF97C2496459D00650EA2 /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		11AAF98024966F1C00650EA2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		11AAF9832496738E00650EA2 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		115AD5EC249CDE4B0082801C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				115AD5ED249CDE710082801C /* WebImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		11AAF97B2496459D00650EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				11D07C5724962ABE002C151D /* VKNewsFeed */,
+				115AD5EC249CDE4B0082801C /* Helpers */,
 				11D07C5624962ABE002C151D /* Products */,
 				11AAF97B2496459D00650EA2 /* Frameworks */,
 			);
@@ -281,6 +292,7 @@
 				11D07C5B24962ABE002C151D /* SceneDelegate.swift in Sources */,
 				115811672497988D00FAA415 /* NetworkService.swift in Sources */,
 				1146DD7924993D7F00415A10 /* NewsfeedModels.swift in Sources */,
+				115AD5EE249CDE710082801C /* WebImageView.swift in Sources */,
 				1146DD6D2498FC7600415A10 /* NetworkDataFetcher.swift in Sources */,
 				1146DD7724993D7F00415A10 /* NewsfeedWorker.swift in Sources */,
 				11AAF98124966F1C00650EA2 /* AuthService.swift in Sources */,
