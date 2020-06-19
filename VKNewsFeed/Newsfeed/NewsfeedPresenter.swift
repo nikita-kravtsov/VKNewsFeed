@@ -39,6 +39,8 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
         
         let profile = self.profile(for: feedItem.sourceId, profiles: profiles, groups: groups)
         
+        let photoAttachment = self.photoAttachment(feedItem: feedItem)
+        
         let date = Date(timeIntervalSince1970: feedItem.date)
         let dateTitle = dateFormatter.string(from: date)
         
@@ -46,13 +48,14 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
                                        name: profile.name,
                                        date: dateTitle,
                                        text: feedItem.text,
+                                       photoAttachment: photoAttachment,
                                        likes: String(feedItem.likes?.count ?? 0),
                                        comments: String(feedItem.comments?.count ?? 0),
                                        shares: String(feedItem.reposts?.count ?? 0),
                                        views: String(feedItem.views?.count ?? 0))
     }
     
-    //    function that will search for information for a specific user
+    // function that will search for information for a specific user
     private func profile(for sourceId: Int, profiles: [Profile], groups: [Group]) -> ProfileRepresentable {
         
         let profilesOrGroups: [ProfileRepresentable] = sourceId >= 0 ? profiles : groups
@@ -63,4 +66,15 @@ class NewsfeedPresenter: NewsfeedPresentationLogic {
         
         return profileRepresentable!
     }
+    // function that will load photo (image) from internet for post
+    private func photoAttachment(feedItem: FeedItems) -> FeedViewModel.FeedCellPhotoAttachment? {
+        guard let photos = feedItem.attachments?.compactMap({ (attachment) in
+            attachment.photo }),
+            let firstPhoto = photos.first else { return nil }
+        return FeedViewModel.FeedCellPhotoAttachment.init(photoUrlString: firstPhoto.srcBIG,
+                                                          width: firstPhoto.width,
+                                                          height: firstPhoto.height)
+    }
 }
+
+

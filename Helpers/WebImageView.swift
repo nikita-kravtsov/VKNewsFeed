@@ -10,8 +10,8 @@ import UIKit
 // Сreated a class with which we load the image, and in the case of reusing the image, we add them to the cache and then take the image from the cache
 class WebImageView: UIImageView {
     
-    func set(imageURL: String) {
-        guard let url = URL(string: imageURL) else { return }
+    func set(imageURL: String?) {
+        guard let imageURL = imageURL, let url = URL(string: imageURL) else { return }
         // check if we have image in the cache
         if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)) {
             self.image = UIImage(data: cachedResponse.data)
