@@ -26,10 +26,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kkY-o3-dXf" firstAttribute="trailing" secondItem="8C6-eR-MWH" secondAttribute="trailing" id="JA7-Lz-P0U"/>
-                            <constraint firstItem="kkY-o3-dXf" firstAttribute="top" secondItem="8C6-eR-MWH" secondAttribute="top" constant="-44" id="ScY-RF-0Gw"/>
-                            <constraint firstItem="kkY-o3-dXf" firstAttribute="leading" secondItem="8C6-eR-MWH" secondAttribute="leading" id="lvg-25-qVu"/>
-                            <constraint firstItem="kkY-o3-dXf" firstAttribute="bottom" secondItem="8C6-eR-MWH" secondAttribute="bottom" constant="34" id="sPE-yO-3bz"/>
+                            <constraint firstAttribute="bottom" secondItem="kkY-o3-dXf" secondAttribute="bottom" id="DDZ-MP-Mpl"/>
+                            <constraint firstItem="kkY-o3-dXf" firstAttribute="top" secondItem="Xgr-Ac-Ra4" secondAttribute="top" id="TPC-zK-1PI"/>
+                            <constraint firstItem="kkY-o3-dXf" firstAttribute="trailing" secondItem="8C6-eR-MWH" secondAttribute="trailing" id="pnE-Cl-p8e"/>
+                            <constraint firstItem="kkY-o3-dXf" firstAttribute="leading" secondItem="8C6-eR-MWH" secondAttribute="leading" id="um9-pq-UxM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8C6-eR-MWH"/>
                     </view>
