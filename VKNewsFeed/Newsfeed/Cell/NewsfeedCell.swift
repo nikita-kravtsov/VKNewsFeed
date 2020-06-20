@@ -10,7 +10,6 @@ import Foundation
 import  UIKit
 
 protocol FeedCellViewModel {
-    
     var iconUrlString: String { get }
     var name: String { get }
     var date: String { get }
@@ -22,6 +21,15 @@ protocol FeedCellViewModel {
     var comments: String? { get }
     var shares: String? { get }
     var views: String? { get }
+    
+    var sizes: FeedCellSizes { get } 
+}
+
+protocol FeedCellSizes {
+    var postLabelFrame: CGRect { get }
+    var postImageFrame: CGRect { get }
+    var bottomViewFrame: CGRect { get }
+    var totalHeight: CGFloat { get }
 }
 
 protocol FeedCellPhotoAttachementViewModel {
@@ -49,6 +57,7 @@ class NewsfeedCell: UITableViewCell {
     @IBOutlet weak var sharesLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
     
+    @IBOutlet weak var buttonView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -76,9 +85,14 @@ class NewsfeedCell: UITableViewCell {
             postImageView.isHidden = true
         }
         
+        
         likesLabel.text = viewModel.likes
         commentsLabel.text = viewModel.comments
         sharesLabel.text = viewModel.shares
         viewsLabel.text = viewModel.views
+        
+        postLabel.frame = viewModel.sizes.postLabelFrame
+        postImageView.frame = viewModel.sizes.postImageFrame
+        buttonView.frame = viewModel.sizes.bottomViewFrame
     }
 }
