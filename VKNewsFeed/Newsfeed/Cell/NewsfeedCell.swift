@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import  UIKit
+import UIKit
 
 protocol FeedCellViewModel {
     var iconUrlString: String { get }
@@ -58,6 +58,11 @@ class NewsfeedCell: UITableViewCell {
     @IBOutlet weak var viewsLabel: UILabel!
     
     @IBOutlet weak var buttonView: UIView!
+    //Сell reuse function
+    override func prepareForReuse() {
+        iconImageView.set(imageURL: nil)
+        postImageView.set(imageURL: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
